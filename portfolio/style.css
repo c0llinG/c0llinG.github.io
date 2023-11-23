@@ -33,8 +33,10 @@ h2 {
 
 
 nav {
+    margin: 1vw;
     gap: 0.5vh;
     text-align: center;
+    align-items: center;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -42,7 +44,6 @@ nav {
 
 
 nav button {
-    max-width: auto;
     border: transparent;
     font-size: 1.5vw;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
@@ -58,25 +59,17 @@ nav button:hover {
 
 
 .socials {
-    width: auto;
     padding: 0%;
     margin: 0%;
-    margin-top: 0.5vh;
     background:none;
     border:none;
+    border-radius: 300px;
 }
 
 
 .socials img {
     display: block;
     width: 2vw;
-}
-
-
-.socials:hover{
-    border-radius: 10px;
-    background-color: rgb(223, 231, 231);
-    transform: scale(1.1);
 }
 
 
@@ -92,6 +85,7 @@ nav button:hover {
     flex-direction: row;
     overflow-y: auto;
     max-height: 70vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 
