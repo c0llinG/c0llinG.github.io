@@ -9,38 +9,40 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
-	overflow-y: auto;
+	overflow: auto;
 }
 
 
 h1, h2 {
     text-align: center;
-    margin: 1px;
 
 }
 
 
 h1 {
 	margin-top:10vh;
-    width: 60vw;
+	margin-bottom: 1vh;
     font-size: 70px;
-    margin: 2vh;
 }
 
 
 h2 {
-    width: 25vw;
     font-size: 50px;
 }
 
 
+h3 {
+	margin-top:4vh;
+}
+
+
 nav {
-	padding-right:50vw;
-    margin: 1vw;
+	margin-right:30px;
+	width:70px;
+	position:relative;
     gap: 0.5vh;
     text-align: center;
     align-items: stretch;
-    position: fixed;
     display: flex;
     flex-direction: column;
 }
@@ -66,11 +68,12 @@ nav button:hover {
 	align-items:center;
     padding: 0%;
     margin: 0%;
-	margin-top: 5vh;
+	margin-top: 4vh;
+	margin-bottom:5vh;
     background:none;
     border:none;
     border-radius: 300px;
-	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 
@@ -88,7 +91,6 @@ nav button:hover {
 
 
 .homebuttons {
-	margin-top:5vh;
 	align-items:center;
 	display:flex;
 	flex-direction: row; 
@@ -113,6 +115,7 @@ nav button:hover {
 
 .homebutton img {
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	border-radius:100px;
 	width: 100px;
 	padding: 0%;
     margin: 0%;
@@ -127,6 +130,7 @@ nav button:hover {
 
 
 .page {
+	margin-right:100px;
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -160,3 +164,17 @@ nav button:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     height: auto;
 }
+
+
+::-webkit-scrollbar {
+	width: 5px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #acacac;
+  border: solid 1px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {border-radius: 10px;}
