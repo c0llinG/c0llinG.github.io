@@ -19,16 +19,18 @@ h1, h2 {
 
 }
 
+
 h1 {
-    width: 50vw;
-    font-size: 6vw;
+	margin-top:10vh;
+    width: 60vw;
+    font-size: 70px;
     margin: 2vh;
 }
 
 
 h2 {
     width: 25vw;
-    font-size: 4vw;
+    font-size: 50px;
 }
 
 
@@ -37,7 +39,7 @@ nav {
     margin: 1vw;
     gap: 0.5vh;
     text-align: center;
-    align-items: center;
+    align-items: stretch;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -46,7 +48,7 @@ nav {
 
 nav button {
     border: transparent;
-    font-size: 1.5vw;
+    font-size: 12px;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -56,21 +58,71 @@ nav button:hover {
     color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     transform: scale(1.1);
+	cursor: pointer;
 }
 
 
 .socials {
+	align-items:center;
     padding: 0%;
     margin: 0%;
+	margin-top: 5vh;
     background:none;
     border:none;
     border-radius: 300px;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+.socials:hover {
+	background-color: #acacac;
+	transform: scale(1.1);
+	cursor: pointer;
 }
 
 
 .socials img {
     display: block;
-    width: 2vw;
+    width: 20px;
+}
+
+
+.homebuttons {
+	margin-top:5vh;
+	align-items:center;
+	display:flex;
+	flex-direction: row; 
+	border:none;
+	gap:5vw;
+	margin-bottom:5vh;
+
+}
+
+
+.homebutton {
+	align-items:center;
+	background:none;
+	padding: 0%;
+    margin: 0%;
+	border:none;
+	display:flex;
+	flex-direction: column; 
+	transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+.homebutton img {
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	width: 100px;
+	padding: 0%;
+    margin: 0%;
+}
+
+
+.homebutton:hover {
+	cursor: pointer;
+	filter: brightness(120%);
+	transform: scale(1.1);
 }
 
 
@@ -94,9 +146,9 @@ nav button:hover {
 .column {
     display: flex;
     flex-direction: column;
-    gap:2vw;
-    padding: 1vw;
-    margin: 1vw;
+    gap:20px;
+    padding: 10px;
+    margin: 10px;
     align-items: center;
 
 }
@@ -104,7 +156,7 @@ nav button:hover {
 
 .art {
     border: 0.2vw solid;
-    max-width: 15vw;
+    max-width: 200px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     height: auto;
 }
