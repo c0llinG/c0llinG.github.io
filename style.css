@@ -92,7 +92,7 @@ nav button:hover {
 
 
 .column {
-    background-color: transparent;
+    background-color: rgb(212, 213, 221);
     display: flex;
     flex-direction: column;
     gap:2vw;
