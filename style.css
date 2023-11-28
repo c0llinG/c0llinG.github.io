@@ -4,7 +4,7 @@ body {
 	align-items: center;
 	font-family: 'Crimson Pro', serif;
 	font-family: 'Iceberg', sans-serif;
-	background-image: url("assets/art/background.png");
+	background-image: url("assets/background.png");
  	background-color: rgb(212, 213, 221);
 	background-size: cover;
 	background-attachment: fixed;
