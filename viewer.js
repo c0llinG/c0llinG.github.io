@@ -5,7 +5,7 @@ const page = document.querySelector('.page');
 const artviewer = document.createElement('div');
 artviewer.className = 'artviewer';
 artviewer.style.display = 'none';
-artviewer.style.justifyContent = 'center';
+
 
 art.forEach(function(image, index) {
 	const clonedImage = image.cloneNode(true);
@@ -19,20 +19,25 @@ page.appendChild(artviewer);
 const viewer = artviewer.querySelectorAll('.art');
 
 const backButton = document.createElement('button');
+backButton.className = 'viewerbutton';
 backButton.textContent = '<';
 backButton.onclick = last;
 
 const exitButton = document.createElement('button');
+exitButton.className = 'viewerbutton';
 exitButton.textContent = 'Back';
 exitButton.onclick = exit;
 exitButton.style.display = 'none';
 
 const forwardButton = document.createElement('button');
+forwardButton.className = 'viewerbutton';
 forwardButton.textContent = '>';
 forwardButton.onclick = next;
 
 const buttons = document.createElement('div');
-const navButtons = document.createElement('nav');
+const navButtons = document.createElement('div');
+
+navButtons.className = 'viewernav';
 
 buttons.style.display = 'none';
 buttons.style.flexDirection = 'row';
@@ -41,16 +46,15 @@ buttons.appendChild(backButton);
 buttons.appendChild(forwardButton);
 navButtons.appendChild(buttons);
 navButtons.appendChild(exitButton);
-navButtons.style.flexDirection = 'column';
-navButtons.style.alignItems = 'center';
+navButtons.style.display = 'none';
 navButtons.style.position = 'fixed';
-navButtons.style.marginLeft = '750px';
-
 page.appendChild(navButtons);
 
 
 function view(index) {
 	gallery.style.display = 'none';
+	navButtons.style.position = 'relative';
+	navButtons.style.display = 'flex';
 	buttons.style.display = 'flex';
 	exitButton.style.display = 'block';
 	artviewer.style.display = 'flex';
@@ -69,4 +73,5 @@ function exit() {
 	buttons.style.display = 'none';
 	exitButton.style.display = 'none';
 	artviewer.style.display = 'none';
+	navButtons.style.position = 'fixed';
 }

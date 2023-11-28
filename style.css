@@ -4,7 +4,7 @@ body {
 	align-items: center;
 	font-family: 'Crimson Pro', serif;
 	font-family: 'Iceberg', sans-serif;
-	background-image: url("assets/art/background.png");
+	background-image: url("assets/background.png");
  	background-color: rgb(212, 213, 221);
 	background-size: cover;
 	background-attachment: fixed;
@@ -15,7 +15,6 @@ body {
 
 h1, h2 {
     text-align: center;
-
 }
 
 
@@ -38,8 +37,15 @@ h3 {
 
 
 footer {
-	font-size:8px;
+	font-size:10px;
 }
+
+
+button {
+	font-family: 'Crimson Pro', serif;
+	font-family: 'Iceberg', sans-serif;
+}
+
 
 nav {
 	margin-right:30px;
@@ -96,11 +102,14 @@ nav button:hover {
 
 
 .homebuttons {
+	max-width:500px;
 	align-items:center;
+	justify-content:center;
 	display:flex;
-	flex-direction: row; 
+	flex-direction: row;
+	flex-wrap: wrap;
 	border:none;
-	gap:5vw;
+	gap:50px;
 	margin-bottom:5vh;
 
 }
@@ -122,6 +131,7 @@ nav button:hover {
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 	border-radius:100px;
 	width: 100px;
+	height:100px;
 	padding: 0%;
     margin: 0%;
 }
@@ -135,7 +145,6 @@ nav button:hover {
 
 
 .page {
-	margin-right:100px;
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -143,6 +152,7 @@ nav button:hover {
 
 
 .gallery {
+	margin-right: 100px;
 	background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
@@ -171,15 +181,48 @@ nav button:hover {
 }
 
 
+.artviewer {
+	justify-content: center;
+	margin-right:40px;
+}
+
+
+.viewernav {
+	gap:1px;
+	flex-direction: column;
+	align-items:center;
+
+}
+
+
+.viewerbutton {
+	margin:1px;
+	border: transparent;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+.viewerbutton:hover {
+	background-color: #acacac;
+    color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+	cursor: pointer;
+}
+
+
 ::-webkit-scrollbar {
 	width: 5px;
 
 }
+
 
 ::-webkit-scrollbar-thumb {
   background-color: #acacac;
   border: solid 1px;
   border-radius: 10px;
 }
+
 
 ::-webkit-scrollbar-track {border-radius: 10px;}
