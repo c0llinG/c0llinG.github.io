@@ -25,7 +25,15 @@
 			<button onclick="location.href='gameArt'">Game Art</button>
 			<button onclick="location.href='logos'">Logos</button>
         </nav>
-		<h2>Coming Soon</h2>
+		<div class= "gallery">
+            <div class="column">
+                <img class= "art" src="assets/traditionalArt/ta1.png" order="0" onclick="view(0)">
+            </div>
+            <div class="column">
+                <img class= "art" src="assets/traditionalArt/ta2.png" order="1" onclick="view(1)">
+            </div>
+        </div>
+		<script src="viewer.js"></script>
     </div>	
 	<button class="socials" title= "@guetta.rt" onclick="window.open('https://www.instagram.com/guetta.rt')"><img src="assets/icons/ig.png"></button>
 </body>
