@@ -7,13 +7,22 @@ artviewer.className = 'artviewer';
 artviewer.style.display = 'none';
 
 
-art.forEach(function(image, index) {
-	const clonedImage = image.cloneNode(true);
-	clonedImage.onclick = function() {view(index);};
-	artviewer.appendChild(clonedImage);
-	clonedImage.style.maxWidth = '500px';
-	clonedImage.style.display = 'none';
+const sortedImages = Array.from(art).sort((a, b) => {
+    const orderA = parseInt(a.getAttribute('order'));
+    const orderB = parseInt(b.getAttribute('order'));
+    return orderA - orderB;
 });
+
+
+sortedImages.forEach(image => {
+    image.onclick = function () {view(parseInt(image.getAttribute('order')));};
+    const clonedImage = image.cloneNode(true);
+	clonedImage.onclick = function() {exit();};
+    artviewer.appendChild(clonedImage);
+    clonedImage.style.maxWidth = '500px';
+    clonedImage.style.display = 'none';
+});
+
 
 page.appendChild(artviewer);
 const viewer = artviewer.querySelectorAll('.art');
@@ -51,7 +60,7 @@ navButtons.style.position = 'fixed';
 page.appendChild(navButtons);
 
 
-function view(index) {
+function view(index,pos) {
 	gallery.style.display = 'none';
 	navButtons.style.position = 'relative';
 	navButtons.style.display = 'flex';
