@@ -12,8 +12,23 @@
 	<link rel="shortcut icon" href="assets/pageicon.png" type="image/png">
 	<title>Game Art</title>
 </head>
+<style>
+	.navPageButton {
+		max-width:100px;
+		display:flex;
+		margin:0px;
+		padding: 0px;
+		transition: transform 0.2s ease-in-out;
+	}
+	
+	.navPageButton:hover {
+		transform: scale(1.1);
+		cursor: pointer;
+	}
+</style>
 <body>
     <h2>Game Art</h2>
+	<img class="navPageButton" src="assets/gameArt/navIcon.png" onclick="window.open('https:/pstlo.github.io/navigator')">
 	<div class= "page">
 		<nav>
 			<button onclick="location.href='/'">Home</button>
